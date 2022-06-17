@@ -1,0 +1,34 @@
+.discussion {
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+  gap: 20px;
+  color: #ccc;
+  user-select: none;
+  cursor: pointer;
+}
+.discussion img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: darkgray;
+  margin-left: 10px;
+}
+.discussion .discussion-container {
+  flex: 1;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+  padding-bottom: 10px;
+}
+.discussion .discussion-container .discussion-div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 5px;
+}
+.discussion .discussion-container .discussion-div .discussion-name {
+  font-size: 18px;
+  font-weight: 500;
+}
+.discussion .discussion-container .discussion-message {
+  overflow: hidden;
+}

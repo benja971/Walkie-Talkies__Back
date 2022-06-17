@@ -1,0 +1,28 @@
+.contact {
+	display: flex;
+	align-items: center;
+	padding: 10px 0px;
+	gap: 20px;
+	color: #ccc;
+	user-select: none;
+	cursor: pointer;
+	height: 88px;
+
+	img {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background-color: darkgray;
+		margin-left: 10px;
+	}
+
+	.contact-name {
+		display: flex;
+		align-items: center;
+		flex: 1;
+		height: 100%;
+		font-size: 18px;
+		font-weight: 500;
+		border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+	}
+}

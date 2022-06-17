@@ -1,0 +1,43 @@
+.messages-form {
+  display: flex;
+  justify-content: space-between;
+}
+.messages-form input {
+  flex: 1;
+  border: none;
+  border-radius: 0;
+  padding: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+  margin: 5px;
+  border-radius: 5px;
+}
+.messages-form button {
+  background-color: #00bcd4;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.messages-form button span {
+  font-family: "Material Icons";
+  font-size: 2rem;
+  padding: 0 0.5rem;
+}
+.messages-form button:hover {
+  background-color: #00acc1;
+}
+.messages-form button:active {
+  background-color: #0097a7;
+}
+.messages-form button:disabled {
+  background-color: #0097a7;
+}
