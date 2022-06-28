@@ -6,19 +6,10 @@ const { getAllUsers, getUser, deleteUser, addContact, getContacts, deleteUsers, 
 const { addMessage } = require("./controllers/manageDiscussions.js");
 
 /**
- *
  * @param {Express} app
  * @param {server} io
  */
 module.exports = function (app, io) {
-	if (process.env.NODE_ENV === "production") app.use(express.static(path.join(__dirname, "build")));
-	else app.use(express.static(path.join(__dirname, "public")));
-
-	app.get("/", (req, res) => {
-		if (process.env.NODE_ENV === "production") res.sendFile(path.join(__dirname, "build", "index.html"));
-		else res.sendFile(path.join(__dirname, "public", "index.html"));
-	});
-
 	io.on("connection", socket => {
 		console.log("a user connected");
 
@@ -62,4 +53,12 @@ module.exports = function (app, io) {
 	app.put("/api/users/:id/contacts/:newC", addContact);
 
 	app.get("/api/users/delete", deleteUsers);
+
+	const dev = path.join(__dirname, "../Walkie-Talkies__Front", "public");
+
+	const prod = path.join(__dirname, "build");
+
+	console.log(process.env.NODE_ENV === "production" ? prod : dev);
+
+	app.use(express.static(process.env.NODE_ENV === "production" ? prod : dev));
 };
