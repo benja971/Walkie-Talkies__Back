@@ -11,7 +11,11 @@ const { addMessage } = require("./controllers/manageDiscussions.js");
  * @param {server} io
  */
 module.exports = function (app, io) {
-	app.use(express.static(path.join(__dirname, "../client/build")));
+	app.use(express.static(path.join(__dirname, "build")));
+
+	app.get("/", (req, res) => {
+		res.sendFile(path.join(__dirname, "build", "index.html"));
+	});
 
 	io.on("connection", socket => {
 		console.log("a user connected");
