@@ -5,7 +5,9 @@
 	"main": "server.js",
 	"scripts": {
 		"start": "node ./server.js",
-		"start:dev": "nodemon ./server.js"
+		"start:dev": "nodemon ./server.js",
+		"start:prod": "pm2 start ./server.js --name walkie-talkie --interpreter node",
+		"logs": "pm2 logs walkie-talkie"
 	},
 	"keywords": [
 		"node",
