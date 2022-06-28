@@ -11,10 +11,12 @@ const { addMessage } = require("./controllers/manageDiscussions.js");
  * @param {server} io
  */
 module.exports = function (app, io) {
-	app.use(express.static(path.join(__dirname, "build")));
+	if (process.env.NODE_ENV === "production") app.use(express.static(path.join(__dirname, "build")));
+	else app.use(express.static(path.join(__dirname, "public")));
 
 	app.get("/", (req, res) => {
-		res.sendFile(path.join(__dirname, "build", "index.html"));
+		if (process.env.NODE_ENV === "production") res.sendFile(path.join(__dirname, "build", "index.html"));
+		else res.sendFile(path.join(__dirname, "public", "index.html"));
 	});
 
 	io.on("connection", socket => {
