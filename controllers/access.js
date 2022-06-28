@@ -7,6 +7,8 @@ const { getDB } = require("../mess");
 async function login(req, res) {
 	const { email, password } = req.body;
 
+	console.log(email, password);
+
 	// get a database connection
 	const db = await getDB();
 

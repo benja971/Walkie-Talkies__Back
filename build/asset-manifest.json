@@ -1,13 +1,10 @@
 {
-  "files": {
-    "main.css": "/benja971/Walkie-Talkies/static/css/main.b2348f02.css",
-    "main.js": "/benja971/Walkie-Talkies/static/js/main.80ca97aa.js",
-    "index.html": "/benja971/Walkie-Talkies/index.html",
-    "main.b2348f02.css.map": "/benja971/Walkie-Talkies/static/css/main.b2348f02.css.map",
-    "main.80ca97aa.js.map": "/benja971/Walkie-Talkies/static/js/main.80ca97aa.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.b2348f02.css",
-    "static/js/main.80ca97aa.js"
-  ]
+	"files": {
+		"main.css": "/static/css/main.b2348f02.css",
+		"main.js": "/static/js/main.2139eadb.js",
+		"index.html": "/index.html",
+		"main.b2348f02.css.map": "/static/css/main.b2348f02.css.map",
+		"main.2139eadb.js.map": "/static/js/main.2139eadb.js.map"
+	},
+	"entrypoints": ["static/css/main.b2348f02.css", "static/js/main.2139eadb.js"]
 }

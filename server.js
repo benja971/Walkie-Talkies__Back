@@ -16,8 +16,6 @@ const io = new Server(server, {
 	},
 });
 
-// console.clear();
-
 // middlewares
 app.enable("trust proxy");
 

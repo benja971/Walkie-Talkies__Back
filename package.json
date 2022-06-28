@@ -38,10 +38,10 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/benja971/Walkie-Talkies.git"
+		"url": "git+https://github.com/benja971/Walkie-Talkies__Back.git"
 	},
 	"bugs": {
-		"url": "https://github.com/benja971/Walkie-Talkies/issues"
+		"url": "https://github.com/benja971/Walkie-Talkies__Back/issues"
 	},
-	"homepage": "https://github.com/benja971/Walkie-Talkies#readme"
+	"homepage": "https://github.com/benja971/Walkie-Talkies__Back#readme"
 }
