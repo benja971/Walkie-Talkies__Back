@@ -1,3 +1,6 @@
+const express = require("express");
+const path = require("path");
+
 const { login, register } = require("./controllers/access");
 const { getAllUsers, getUser, deleteUser, addContact, getContacts, deleteUsers, getDiscussions } = require("./controllers/manageUsers");
 const { addMessage } = require("./controllers/manageDiscussions.js");
@@ -8,6 +11,8 @@ const { addMessage } = require("./controllers/manageDiscussions.js");
  * @param {server} io
  */
 module.exports = function (app, io) {
+	app.use(express.static(path.join(__dirname, "../client/build")));
+
 	io.on("connection", socket => {
 		console.log("a user connected");
 
