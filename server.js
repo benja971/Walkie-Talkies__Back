@@ -9,12 +9,7 @@ const routes = require("./routes");
 
 const app = express();
 const server = http.createServer(app);
-const io = new Server(server, {
-	cors: {
-		origin: "*",
-		// credentials: true,
-	},
-});
+const io = new Server(server);
 
 // middlewares
 app.enable("trust proxy");
